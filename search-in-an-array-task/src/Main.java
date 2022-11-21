@@ -5,6 +5,7 @@ public class Main {
         int [] numbers = new int[5];
         Scanner input = new Scanner(System.in);
         int choice;
+        int index=0;
         boolean found = false;
 
         for (int i= 0; i<5 ; i++)
@@ -20,10 +21,16 @@ public class Main {
         for (int i= 0; i<5 ; i++)
         {
             if (choice == numbers[i]) {
+                index = i;
                 found = true;
+                System.out.println("Number was found at " + "index: "+ index);
                 break;
             }
+
         }
-        System.out.println("Found = "+ found);
+        if (!found) {
+            System.out.println("Number was not found");
+        }
+
     }
 }
